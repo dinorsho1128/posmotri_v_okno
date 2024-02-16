@@ -65,7 +65,7 @@ ol {
 .search-form {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: flex-start;
 }
 
 .search-form__fieldset {
@@ -111,12 +111,6 @@ ol {
   appearance: none;
 }
 
-.search-form__checkbox-list {
-  display: flex;
-  align-items: flex-start;
-  column-gap: 15px;
-}
-
 .search-form__checkbox {
   position: static;
   width: 19px;
@@ -134,6 +128,7 @@ ol {
   color: rgb(255, 255, 255);
   font-family: "Fira Sans Condensed", sans-serif;
   font-size: 18px;
+  margin-top: 20px;
   font-weight: 700;
   line-height: 22px;
   letter-spacing: 0%;
@@ -159,8 +154,8 @@ ol {
 }
 
 .button:active {
-  outline: 1px solid #fff;
-  outline-offset: 0px;
+  outline: 0px solid #fff;
+  outline-offset: 1px;
   background: #545050;
   text-decoration: none;
   
@@ -204,7 +199,7 @@ ol {
 
 .search-form__checkbox-list {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   column-gap: 15px;
 }
 
@@ -214,7 +209,6 @@ ol {
 
 .search-form__label {
   display: flex;
-  gap: 2px;
 }
 
 .search-form__pseudo-checkbox::before {
@@ -226,18 +220,23 @@ ol {
   background-color: #fff;
 }
 
+ .content__details {
+  flex-grow: 1;
+}
+
+.title {
+  margin-bottom: 26px;
+  color: #fff;
+  font-family: 'Oswald', sans-serif;
+  font-weight: 700;
+  font-size: 75px;
+  line-height: 94%;
+  text-transform: uppercase;
+} 
 .content__details {
   flex-grow: 1;
 }
 
-.content__list-item:active {
-  outline: 1px solid #fff;
-  outline-offset: 1px;
-}
-
-.content__list-item:focus {
-  outline: 1px;
-}
 .content__accent {
   color: #545050;
 }
@@ -245,12 +244,13 @@ ol {
 .content__list {
   position: relative;
   height: 298px;
+ 
   padding: 3px;
   overflow-y: auto;
 }
 
 .content__list-item:not(:last-child) {
-  margin-bottom:30px;
+  margin-bottom: 30px;
 }
 
 .content__card-link {
@@ -261,10 +261,6 @@ ol {
 
 .content__card-link:hover {
   text-decoration: underline;
-}
-
-.content__card-link:active {
-  text-decoration: none;
 }
 
 .content__card-link:focus {
@@ -298,7 +294,7 @@ ol {
   font-family: 'Oswald', sans-serif;
   font-weight: 700;
   font-size: 30px;
-  line-height: normal;
+  line-height: 100%;
   text-transform: uppercase;
 }
 
@@ -311,17 +307,7 @@ ol {
 .content__video-card-thumbnail {
   flex-shrink: 0;
   width: 194px;
-  min-height: 103px;
+  height: 103px;
   object-fit: cover;
   object-position: center;
-}
-
-.title {
-  margin-bottom: 26px;
-  color: #fff;
-  font-family: 'Oswald', sans-serif;
-  font-weight: 700;
-  font-size: 75px;
-  line-height: 94%;
-  text-transform: uppercase;
 }
